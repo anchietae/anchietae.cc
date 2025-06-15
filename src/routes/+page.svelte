@@ -1,5 +1,6 @@
 <script lang="ts">
     import "../app.css";
+
     let open = false;
 
     import {Dialog, Button, Card} from "m3-svelte";
@@ -17,10 +18,10 @@
 </Card>
 
 <Dialog headline="Pronunciation" bind:open>
-  /æn.ʃiˈe.tiː/
-  {#snippet buttons()}
-    <Button variant="tonal" click={() => (open = false)}>Close</Button>
-  {/snippet}
+    /æn.ʃiˈe.tiː/
+    {#snippet buttons()}
+        <Button variant="tonal" click={() => (open = false)}>Close</Button>
+    {/snippet}
 </Dialog>
 
 <style>

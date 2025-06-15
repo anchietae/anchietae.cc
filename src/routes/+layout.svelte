@@ -9,6 +9,7 @@
   import { page } from "$app/state";
   import {NavCMLX, NavCMLXItem} from "m3-svelte";
   import Header from "$lib/components/Header.svelte";
+  import Footer from "$lib/components/Footer.svelte";
   import "../app.css";
 
   const paths = [
@@ -51,6 +52,7 @@
   <div class="content">
     <Header />
     <slot />
+    <Footer />
   </div>
 </div>
 
@@ -67,6 +69,7 @@
     display: flex;
     flex-direction: column;
     padding: 1rem;
+    position: relative;
   }
   @media (width < 52.5rem) {
     .container {

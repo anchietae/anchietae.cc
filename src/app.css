@@ -132,6 +132,10 @@
   }
 }
 
+:root {
+  --m3-font: "Roboto Serif", serif;
+}
+
 body {
   background-color: rgb(var(--m3-scheme-background));
   color: rgb(var(--m3-scheme-on-background));
