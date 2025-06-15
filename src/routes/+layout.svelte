@@ -1,4 +1,6 @@
 <script lang="ts">
+  export const prerender = true
+
   import iconHome from "@ktibow/iconset-material-symbols/home-outline";
   import iconHomeS from "@ktibow/iconset-material-symbols/home";
 
