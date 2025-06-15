@@ -20,7 +20,7 @@ if [ $? -ne 0 ]; then
 fi
 
 log_message "Building website..."
-pnpm install -P >> "$LOG_FILE" 2>&1
+pnpm install >> "$LOG_FILE" 2>&1
 bun run build >> "$LOG_FILE" 2>&1
 if [ $? -ne 0 ]; then
      log_message "Error: Website build failed."
