@@ -20,6 +20,7 @@ fi
 
 log_message "Building website..."
 pnpm install
+bun install # for good measure
 bun run build
 if [ $? -ne 0 ]; then
      log_message "Error: Website build failed."
