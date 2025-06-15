@@ -2,10 +2,9 @@
 
 REPO_DIR="/home/deployuser/anchietae.cc"
 WEB_ROOT="/var/www/anchietae.cc"
-LOG_FILE="/var/log/deploy.log"
 
 log_message() {
-    echo "$(date '+%Y-%m-%d %H:%M:%S') - $1" >> "$LOG_FILE"
+    echo "$(date '+%Y-%m-%d %H:%M:%S') - $1"
 }
 
 log_message "Deployment started."
@@ -13,15 +12,15 @@ log_message "Deployment started."
 cd "$REPO_DIR" || { log_message "Error: Could not change to repository directory."; exit 1; }
 
 log_message "Pulling latest changes..."
-git pull origin master >> "$LOG_FILE" 2>&1
+git pull origin master
 if [ $? -ne 0 ]; then
     log_message "Error: Git pull failed."
     exit 1
 fi
 
 log_message "Building website..."
-pnpm install >> "$LOG_FILE" 2>&1
-bun run build >> "$LOG_FILE" 2>&1
+pnpm install
+bun run build
 if [ $? -ne 0 ]; then
      log_message "Error: Website build failed."
      exit 1
