@@ -27,7 +27,7 @@ if [ $? -ne 0 ]; then
      exit 1
 fi
 
-rsync -av --delete "$REPO_DIR/dist/" "$WEB_ROOT/"
+rsync -av --delete "$REPO_DIR/build/" "$WEB_ROOT/"
 
 if [ $? -ne 0 ]; then
     log_message "Error: Copying files to web root failed."
