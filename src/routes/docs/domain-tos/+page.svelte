@@ -223,7 +223,7 @@
             You are responsible for any data collected by your instance and must comply with all applicable data privacy laws and regulations.
         </li>
         <li>
-            You may need to create or adapt a Terms of Service and Privacy Policy appropriate for your users and your instance's configuration (the `TOS_URL` in `config.json` can be used for this).
+            You may need to create or adapt a Terms of Service and Privacy Policy appropriate for your users and your instance's configuration.
         </li>
     </ul>
 </Card>
