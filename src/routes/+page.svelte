@@ -28,5 +28,7 @@
     .name {
         color: rgb(var(--m3-scheme-primary));
         cursor: pointer;
+        font-weight: bolder;
+        text-decoration: wavy underline;
     }
 </style>

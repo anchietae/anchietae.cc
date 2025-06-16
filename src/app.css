@@ -133,7 +133,8 @@
 }
 
 :root {
-  --m3-font: "Roboto Serif", serif;
+  --m3-font: "Roboto Flex", sans-serif;
+  --header-font: "Roboto Serif", serif;
 }
 
 body {
@@ -152,4 +153,14 @@ body {
 
 h1, h2, h3, h4, h5, h6, p, ul, ol {
   margin: 0.5em 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--header-font);
+}
+
+p > a, li > a {
+  text-decoration: wavy underline !important;
+  font-weight: 500;
+  color: rgb(var(--m3-scheme-primary));
 }
