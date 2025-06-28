@@ -1,4 +1,8 @@
 <script>
+    import {Button, Icon} from 'm3-svelte';
+    import mail from "@ktibow/iconset-material-symbols/mail-outline";
+    import coffee from "@ktibow/iconset-material-symbols/coffee-outline";
+    import graph_1 from "@ktibow/iconset-material-symbols/graph-1";
 </script>
 
 <footer>
@@ -15,14 +19,25 @@
             <rect width="100%" height="100%" fill="url(#a)"></rect>
         </svg>
     </div>
+    <div class="footer">
+        <Button variant="outlined" iconType="full" href="mailto:contact@anchietae.cc"><Icon icon={mail}></Icon></Button>
+        <Button variant="outlined" iconType="full" href="https://github.com/anchietae"><Icon icon={graph_1}></Icon></Button>
+        <Button variant="outlined" iconType="full" href="https://ko-fi.com/anchietae"><Icon icon={coffee}></Icon></Button>
+    </div>
 </footer>
 
 
 <style>
     footer {
-        position: absolute;
+        position: relative;
         bottom: 0;
         left: 0;
         right: 0;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
     }
 </style>

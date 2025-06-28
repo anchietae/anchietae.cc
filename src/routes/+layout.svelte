@@ -5,6 +5,9 @@
   import iconDocs from "@ktibow/iconset-material-symbols/developer-guide-outline";
   import iconDocsS from "@ktibow/iconset-material-symbols/developer-guide";
 
+  import chat from "@ktibow/iconset-material-symbols/chat-outline";
+  import chatS from "@ktibow/iconset-material-symbols/chat";
+
   import { base } from "$app/paths";
   import { page } from "$app/state";
   import {NavCMLX, NavCMLXItem} from "m3-svelte";
@@ -24,8 +27,15 @@
       icon: iconDocs,
       iconS: iconDocsS,
       label: "Docs"
+    },
+    {
+      path: "https://matrix.to/#/#general:anchietae.cc",
+      icon: chat,
+      iconS: chatS,
+      label: "Matrix"
     }
   ];
+  const isExternal = (path: string) => /^(https?:\/\/)/.test(path);
   const normalizePath = (path: string) => {
     const u = new URL(path, page.url.href);
     path = u.pathname;
@@ -38,10 +48,10 @@
   <div class="sidebar">
     <NavCMLX variant="auto">
       {#each paths as { path, icon, iconS, label }}
-        {@const selected = normalizePath(path) === normalizePath(page.url.pathname)}
+        {@const selected = !isExternal(path) && normalizePath(path) === normalizePath(page.url.pathname)}
         <NavCMLXItem
           variant="auto"
-          href={normalizePath(path)}
+          href={path}
           {selected}
           icon={selected ? iconS : icon}
           text={label}
