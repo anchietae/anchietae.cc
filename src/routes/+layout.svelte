@@ -8,9 +8,6 @@
   import chat from "@ktibow/iconset-material-symbols/chat-outline";
   import chatS from "@ktibow/iconset-material-symbols/chat";
 
-  import articlePerson from "@ktibow/iconset-material-symbols/article-person-outline";
-  import articlePersonS from "@ktibow/iconset-material-symbols/article-person";
-
   import { base } from "$app/paths";
   import { page } from "$app/state";
   import { NavCMLX, NavCMLXItem } from "m3-svelte";
@@ -30,12 +27,6 @@
       icon: iconDocs,
       iconS: iconDocsS,
       label: "Docs",
-    },
-    {
-      path: "/blog",
-      icon: articlePerson,
-      iconS: articlePersonS,
-      label: "Blog",
     },
     {
       path: "https://matrix.to/#/#general:anchietae.cc",
