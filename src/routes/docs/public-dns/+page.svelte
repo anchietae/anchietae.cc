@@ -8,10 +8,11 @@
 <Card variant="filled">
 <h2>IPs:</h2>
 <ul>
-    <li>132.145.255.58</li>
-    <li>129.159.30.109</li>
+    <li>132.145.255.58 (2603:c020:8003:deff:dafe:5f56:d0f8:e0e6)</li>
+    <li>129.159.30.109 (2603:c020:8003:deff:418c:4532:4d1e:390f)</li>
 </ul>
 <p>Order as you want, no recommended order.</p>
+<p>You may order the IPv6 addresses the same way you ordered the IPv4 ones.</p>
 </Card>
 
 <p>Your requests are hidden. I only collect query counts from your IP. That's it.</p>
