@@ -1,6 +1,11 @@
 <script>
     import { Card } from "m3-svelte";
     export let data;
+
+    let currentPage = 1;
+    const pageSize = 20;
+    $: totalPages = Math.ceil(data.posts.length / pageSize);
+    $: paginatedPosts = data.posts.slice((currentPage - 1) * pageSize, currentPage * pageSize);
 </script>
 
 <h1>Blog</h1>
@@ -9,7 +14,7 @@
     <p>No posts available at the moment.</p>
 {:else}
     <div class="posts">
-        {#each data.posts as post, i}
+        {#each paginatedPosts as post, i}
             {#if i % 2 === 0}
                 <a href={`/blog/${post.slug}`}>
                     <Card variant="filled">
@@ -29,12 +34,12 @@
     </div>
 
     <div class="pagination">
-        {#if data.page > 1}
-            <a href={`/blog?page=${data.page - 1}`}>Previous</a>
+        {#if currentPage > 1}
+            <button on:click={() => currentPage--}>Previous</button>
         {/if}
-        <span>Page {data.page}/{data.totalPages}</span>
-        {#if data.page < data.totalPages}
-            <a href={`/blog?page=${data.page + 1}`}>Next</a>
+        <span>Page {currentPage}/{totalPages}</span>
+        {#if currentPage < totalPages}
+            <button on:click={() => currentPage++}>Next</button>
         {/if}
     </div>
 {/if}
@@ -57,5 +62,12 @@
         justify-content: space-between;
         align-items: center;
         margin-top: 1rem;
+    }
+
+    button {
+        background: none;
+        border: 1px solid;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
     }
 </style>

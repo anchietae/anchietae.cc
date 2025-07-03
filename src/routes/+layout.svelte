@@ -26,13 +26,13 @@
       label: "Home",
     },
     {
-      path: base || "/docs",
+      path: "/docs",
       icon: iconDocs,
       iconS: iconDocsS,
       label: "Docs",
     },
     {
-      path: base || "/blog",
+      path: "/blog",
       icon: articlePerson,
       iconS: articlePersonS,
       label: "Blog",
