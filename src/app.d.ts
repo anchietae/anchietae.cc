@@ -8,6 +8,9 @@ declare global {
 		// interface PageState {}
 		// interface Platform {}
 	}
+	
+	// Global build-time constants
+	const __GIT_HASH__: string;
 }
 
 export {};

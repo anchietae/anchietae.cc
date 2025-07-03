@@ -24,6 +24,9 @@
         <Button variant="outlined" iconType="full" href="https://github.com/anchietae"><Icon icon={graph_1}></Icon></Button>
         <Button variant="outlined" iconType="full" href="https://ko-fi.com/anchietae"><Icon icon={coffee}></Icon></Button>
     </div>
+    <div class="git-hash">
+        <span>{__GIT_HASH__}</span>
+    </div>
 </footer>
 
 
@@ -39,5 +42,17 @@
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+    }
+
+    .git-hash {
+        text-align: center;
+        margin-top: 8px;
+        padding: 4px 0;
+    }
+
+    .git-hash span {
+        font-size: 0.75rem;
+        color: rgb(var(--m3-scheme-on-surface-variant));
+        opacity: 0.7;
     }
 </style>
