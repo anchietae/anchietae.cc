@@ -8,9 +8,12 @@
   import chat from "@ktibow/iconset-material-symbols/chat-outline";
   import chatS from "@ktibow/iconset-material-symbols/chat";
 
+  import articlePerson from "@ktibow/iconset-material-symbols/article-person-outline";
+  import articlePersonS from "@ktibow/iconset-material-symbols/article-person";
+
   import { base } from "$app/paths";
   import { page } from "$app/state";
-  import {NavCMLX, NavCMLXItem} from "m3-svelte";
+  import { NavCMLX, NavCMLXItem } from "m3-svelte";
   import Header from "$lib/components/Header.svelte";
   import Footer from "$lib/components/Footer.svelte";
   import "../app.css";
@@ -26,14 +29,20 @@
       path: base || "/docs",
       icon: iconDocs,
       iconS: iconDocsS,
-      label: "Docs"
+      label: "Docs",
+    },
+    {
+      path: base || "/blog",
+      icon: articlePerson,
+      iconS: articlePersonS,
+      label: "Blog",
     },
     {
       path: "https://matrix.to/#/#general:anchietae.cc",
       icon: chat,
       iconS: chatS,
-      label: "Matrix"
-    }
+      label: "Matrix",
+    },
   ];
   const isExternal = (path: string) => /^(https?:\/\/)/.test(path);
   const normalizePath = (path: string) => {
@@ -48,7 +57,9 @@
   <div class="sidebar">
     <NavCMLX variant="auto">
       {#each paths as { path, icon, iconS, label }}
-        {@const selected = !isExternal(path) && normalizePath(path) === normalizePath(page.url.pathname)}
+        {@const selected =
+          !isExternal(path) &&
+          normalizePath(path) === normalizePath(page.url.pathname)}
         <NavCMLXItem
           variant="auto"
           href={path}
