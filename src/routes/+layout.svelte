@@ -13,6 +13,7 @@
   import { NavCMLX, NavCMLXItem } from "m3-svelte";
   import Header from "$lib/components/Header.svelte";
   import Footer from "$lib/components/Footer.svelte";
+  import Top from "$lib/components/Top.svelte";
   import "../app.css";
 
   const paths = [
@@ -67,6 +68,7 @@
     <Footer />
   </div>
 </div>
+<Top />
 
 <style>
   .container {

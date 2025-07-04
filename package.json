@@ -25,6 +25,7 @@
 	"dependencies": {
 		"@ktibow/iconset-material-symbols": "^0.0.1749705809",
 		"@sveltejs/adapter-static": "^3.0.8",
+		"detectincognitojs": "^1.6.0",
 		"m3-svelte": "^4.5.3"
 	}
 }
