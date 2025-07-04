@@ -38,4 +38,14 @@
         right: 16px;
         z-index: 1000;
     }
+    @media (37.5rem <= width < 52.5rem) {
+        .fab {
+            bottom: calc(4rem + 16px);
+        }
+    }
+    @media (width < 37.5rem) {
+        .fab {
+            bottom: calc(4rem + 16px);
+        }
+    }
 </style>

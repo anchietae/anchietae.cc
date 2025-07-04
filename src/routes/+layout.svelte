@@ -122,4 +122,10 @@
       grid-column: 2;
     }
   }
+
+  /* other stuff, linebreaks, etc */
+  :global(li, p, h1, h2, h3, h4, h5, h6) {
+    word-break: break-all;
+    hyphens: auto;
+  }
 </style>
