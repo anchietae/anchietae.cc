@@ -10,7 +10,8 @@ declare global {
 	}
 	
 	// Global build-time constants
-	const __GIT_HASH__: string;
+	const __GIT_HASH_SHORT__: string;
+	const __GIT_HASH_LONG__: string;
 }
 
 export {};

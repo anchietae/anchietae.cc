@@ -1,8 +1,9 @@
-<script>
-    import {Button, Icon} from 'm3-svelte';
+<script lang="ts">
+    import {Button, Icon, Snackbar} from 'm3-svelte';
     import mail from "@ktibow/iconset-material-symbols/mail-outline";
     import coffee from "@ktibow/iconset-material-symbols/coffee-outline";
     import graph_1 from "@ktibow/iconset-material-symbols/graph-1";
+    let snackbar: ReturnType<typeof Snackbar>;
 </script>
 
 <footer>
@@ -25,7 +26,8 @@
         <Button variant="outlined" iconType="full" href="https://ko-fi.com/anchietae"><Icon icon={coffee}></Icon></Button>
     </div>
     <div class="git-hash">
-        <span>{__GIT_HASH__}</span>
+        <Button variant="text" square={true} click={() => snackbar.show({ message: __GIT_HASH_LONG__, closable: true })}><span>{__GIT_HASH_SHORT__}</span></Button>
+        <Snackbar bind:this={snackbar} />
     </div>
 </footer>
 
@@ -51,7 +53,6 @@
     }
 
     .git-hash span {
-        font-size: 0.75rem;
         color: rgb(var(--m3-scheme-on-surface-variant));
         opacity: 0.7;
     }
