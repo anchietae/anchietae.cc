@@ -16,6 +16,9 @@
   import Top from "$lib/components/Top.svelte";
   import "../app.css";
 
+  import { onMount } from "svelte";
+  import Cookies from "js-cookie";
+
   const paths = [
     {
       path: base || "/",
@@ -43,6 +46,19 @@
     if (path.endsWith("/")) path = path.slice(0, -1);
     return path || "/";
   };
+
+  import { getFingerprint } from "@thumbmarkjs/thumbmarkjs";
+  import { v5 as uuidv5 } from "uuid";
+
+  onMount(async () => {
+    const uuidVal = Cookies.get("uuid");
+    const fp = await uuidv5(await getFingerprint(), "3d11795e-ff7a-5c6d-bc8b-f86c25bc36b6");
+    if (!uuidVal) {
+      Cookies.set("uuid", fp, { expires: 365, sameSite: 'strict', path: '/' });
+    } else if (uuidVal !== fp) {
+      console.warn("uuid mismatch");
+    }
+  });
 </script>
 
 <div class="container">
