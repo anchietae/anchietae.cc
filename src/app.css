@@ -143,7 +143,7 @@ body {
   margin: 0;
   padding: 0;
 
-  font-feature-settings: "calt" 1, "dlig" 1, "tnum" 1, "case" 1, "ccmp" 1, "zero" 1, "ss01" 1, "ss02" 1, "ss03" 1;
+  font-feature-settings: "calt" 1, "dlig" 1, "tnum" 1, "case" 1, "ccmp" 1, "zero" 1, "ss02" 1, "ss03" 1, "cv10" 1, "cv06" 1, "cv01" 1, "cv03" 1;
 }
 
 * {
