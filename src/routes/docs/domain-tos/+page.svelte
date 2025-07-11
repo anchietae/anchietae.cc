@@ -3,7 +3,7 @@
 </script>
 
 <h1>Terms of Service for ”Domain Dave” Discord Bot</h1>
-<p>Effective Date: June 15, 2025</p>
+<p>Effective Date: July 11, 2025</p>
 
 <p>
     This Terms of Service (TOS) applies to the Discord bot instance known as ”Domain Dave” (hereinafter ”the Bot”).
@@ -192,23 +192,29 @@
         <a href="https://github.com/qwit-development/domain/blob/master/functions/usageRep.js">functions/usageRep.js</a>) where users are assigned a score. This score can influence the Bot's responsiveness and helpfulness, potentially tiered as implied in persona prompts. Reputation scores are associated with a user's Discord ID and stored by the Bot instance. Scores are generally not publicly visible to other users. Upvote/downvote emojis may be used in relation to this system.
     </p>
     <p>
-        Users of the "Domain Dave" instance may request the removal of their User ID and associated reputation score from the database by contacting <a href="mailto:contact@anchietae.cc">contact@anchietae.cc</a>. Providing your Discord User ID will expedite this process.
+        Users of the "Domain Dave" instance may request the removal of their User ID and associated reputation score from the database by contacting <a href="mailto:contact@anchietae.cc">contact@anchietae.cc</a>. Providing your Discord User ID will expedite this process. Please note that such a request will not remove an active ban (see Section 6.2); attempts to circumvent a ban via data deletion requests are prohibited and will be disregarded.
     </p>
 </Card>
 <Card variant="elevated">
     <h3>7.3. Other Indicators</h3>
     <p>The Bot may use specific emojis for feedback, such as indicating an upload is in progress or completed.</p>
 </Card>
+<Card variant="filled">
+    <h3>7.4. Memory Functionality</h3>
+    <p>
+        The Bot may create summaries or "memories" based on its daily conversations to maintain long-term context and improve user experience. You acknowledge that a data deletion request may not result in the removal of all mentions of your user from these generated memories.
+    </p>
+</Card>
 
 <h2>8. Self-Hosting and Open Source</h2>
-<Card variant="filled">
+<Card variant="elevated">
     <h3>8.1. Availability and License</h3>
     <p>
         The underlying software for the Bot, ”Domain-Unchained”, is open-source and licensed under the GNU Affero General Public License v3.0 or later (AGPLv3+), as detailed in
         <a href="https://github.com/qwit-development/domain/blob/master/LICENSE.md">LICENSE.md</a> and <a href="https://github.com/qwit-development/domain/blob/master/readme.md">readme.md</a>. Users have the right to download, modify, and run their own instances of the software.
     </p>
 </Card>
-<Card variant="elevated">
+<Card variant="filled">
     <h3>8.2. Self-Hoster Responsibilities</h3>
     <p>If you choose to self-host an instance of ”Domain-Unchained”:</p>
     <ul>
@@ -227,7 +233,7 @@
         </li>
     </ul>
 </Card>
-<Card variant="filled">
+<Card variant="elevated">
     <h3>8.3. Applicability of These Terms</h3>
     <p>
         This TOS specifically governs the ”Domain Dave” instance. While it may serve as a template, self-hosters are responsible for establishing their own terms for their instances. The owners of ”Domain Dave” are not responsible for any self-hosted instances.
