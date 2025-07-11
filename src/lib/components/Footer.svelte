@@ -56,18 +56,20 @@
             ><Icon icon={coffee}></Icon></Button
         >
     </div>
-    {#if isIncognito}
-        <div class="git-hash">
+    <div class="git-hash">
+        {#if isIncognito}
             <Button variant="text" iconType="full" disabled={true} square={true}
                 ><Icon icon={eyeglasses_2}></Icon></Button
             >
-        </div>
-    {:else}
-        <div class="git-hash">
+        {:else}
             <Button variant="text" square={true} click={() => (open = true)}
-                ><span>{__GIT_HASH_SHORT__}</span></Button>
-        </div>
-    {/if}
+                ><span>{__GIT_HASH_SHORT__}</span></Button
+            >
+        {/if}
+        <Button variant="text" disabled={true} square={true}>
+            <img src="/banner.gif" alt="" draggable="false" />
+        </Button>
+    </div>
 </footer>
 
 <FooterPopout bind:open></FooterPopout>
@@ -87,9 +89,16 @@
     }
 
     .git-hash {
+        display: flex;
         text-align: center;
         margin-top: 8px;
         padding: 4px 0;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .git-hash img {
+        image-rendering: pixelated;
     }
 
     .git-hash span {
