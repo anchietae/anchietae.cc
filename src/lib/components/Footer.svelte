@@ -1,12 +1,13 @@
 <script lang="ts">
-    import { Button, Icon, Snackbar } from "m3-svelte";
+    import FooterPopout from "./FooterPopout.svelte";
+    import { Button, Icon } from "m3-svelte";
     import mail from "@ktibow/iconset-material-symbols/mail-outline";
     import coffee from "@ktibow/iconset-material-symbols/coffee-outline";
     import graph_1 from "@ktibow/iconset-material-symbols/graph-1";
     import eyeglasses_2 from "@ktibow/iconset-material-symbols/eyeglasses-2";
-    let snackbar: ReturnType<typeof Snackbar>;
 
     let isIncognito = false;
+    let open = false;
 
     import { detectIncognito } from "detectincognitojs";
 
@@ -57,25 +58,19 @@
     </div>
     {#if isIncognito}
         <div class="git-hash">
-            <Button
-            variant="text"
-            iconType="full"
-            disabled={true}
-            square={true}
-            ><Icon icon={eyeglasses_2}></Icon></Button>
+            <Button variant="text" iconType="full" disabled={true} square={true}
+                ><Icon icon={eyeglasses_2}></Icon></Button
+            >
         </div>
     {:else}
-    <div class="git-hash">
-        <Button
-            variant="text"
-            square={true}
-            click={() =>
-                snackbar.show({ message: __GIT_HASH_LONG__, closable: true })}
-            ><span>{__GIT_HASH_SHORT__}</span></Button>
-        <Snackbar bind:this={snackbar} />
-    </div>
+        <div class="git-hash">
+            <Button variant="text" square={true} click={() => (open = true)}
+                ><span>{__GIT_HASH_SHORT__}</span></Button>
+        </div>
     {/if}
 </footer>
+
+<FooterPopout bind:open></FooterPopout>
 
 <style>
     footer {
