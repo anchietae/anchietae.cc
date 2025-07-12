@@ -8,7 +8,7 @@
     <div class="outer">
         <BottomSheet close={() => (open = false)}>
             <div class="inner">
-                <img src="/ceobe.gif" alt="" loading="lazy" draggable="false"/>
+                <img src="/ceobe.gif" alt="" loading="lazy" draggable="false" />
                 <a
                     href="https://github.com/anchietae/anchietae.cc/commit/{__GIT_HASH_LONG__}"
                     ><h3>{__GIT_HASH_LONG__}</h3></a

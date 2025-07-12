@@ -56,7 +56,7 @@
             ><Icon icon={coffee}></Icon></Button
         >
     </div>
-    <div class="git-hash">
+    <div class="footer">
         {#if isIncognito}
             <Button variant="text" iconType="full" disabled={true} square={true}
                 ><Icon icon={eyeglasses_2}></Icon></Button
@@ -68,6 +68,20 @@
         {/if}
         <Button variant="text" disabled={true} square={true}>
             <img src="/banner.gif" alt="" draggable="false" />
+        </Button>
+    </div>
+    <div class="footer">
+        <Button
+            variant="filled"
+            href="https://www.abuseipdb.com/user/223280"
+            square={true}
+            title="AbuseIPDB Contributor"
+        >
+            <img
+                src="https://www.abuseipdb.com/contributor/223280.svg"
+                alt="AbuseIPDB Contributor Badge"
+                style="width: 100px;"
+            />
         </Button>
     </div>
 </footer>
@@ -84,12 +98,6 @@
 
     .footer {
         display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-
-    .git-hash {
-        display: flex;
         text-align: center;
         margin-top: 8px;
         padding: 4px 0;
@@ -97,11 +105,11 @@
         align-items: center;
     }
 
-    .git-hash img {
+    .footer img {
         image-rendering: pixelated;
     }
 
-    .git-hash span {
+    .footer span {
         color: rgb(var(--m3-scheme-on-surface-variant));
         opacity: 0.7;
     }
