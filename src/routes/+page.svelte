@@ -1,3 +1,7 @@
+<svelte:head>
+    <title>Anchietae</title>
+</svelte:head>
+
 <script lang="ts">
     import "../app.css";
 

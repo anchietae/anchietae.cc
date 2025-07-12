@@ -1,3 +1,7 @@
+<svelte:head>
+    <title>Domain ToS</title>
+</svelte:head>
+
 <script lang="ts">
     import {Card} from "m3-svelte";
 </script>

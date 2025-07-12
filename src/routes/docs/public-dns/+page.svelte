@@ -1,3 +1,6 @@
+<svelte:head>
+    <title>Public DNS</title>
+</svelte:head>
 <script>
     import { Card } from 'm3-svelte';
 </script>
