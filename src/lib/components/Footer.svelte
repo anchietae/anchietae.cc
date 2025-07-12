@@ -73,14 +73,15 @@
     <div class="footer">
         <Button
             variant="filled"
-            href="https://abuseipdb.com/user/223280"
+            href="https://www.abuseipdb.com/user/223280"
             square={true}
             title="AbuseIPDB Contributor"
         >
             <img
-                src="https://abuseipdb.com/contributor/223280.svg"
+                src="https://www.abuseipdb.com/contributor/223280.svg"
                 alt="AbuseIPDB Contributor Badge"
                 style="width: 100px;"
+                crossorigin="anonymous"
             />
         </Button>
     </div>
