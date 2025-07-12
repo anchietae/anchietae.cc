@@ -1,7 +1,3 @@
-<svelte:head>
-    <title>Anchietae</title>
-</svelte:head>
-
 <script lang="ts">
     import "../app.css";
 
@@ -9,6 +5,16 @@
 
     import { Dialog, Button, Card } from "m3-svelte";
 </script>
+
+<svelte:head>
+    <title>Anchietae</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap"
+        rel="stylesheet"
+    />
+</svelte:head>
 
 <!-- svelte-ignore a11y_no_static_element_interactions -->
 <!-- svelte-ignore a11y_click_events_have_key_events -->
@@ -38,7 +44,6 @@
 </Dialog>
 
 <style>
-    @import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap");
     .name {
         color: rgb(var(--m3-scheme-primary));
         cursor: pointer;
