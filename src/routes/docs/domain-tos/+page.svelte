@@ -3,7 +3,7 @@
 </script>
 
 <h1>Terms of Service for ”Domain Dave” Discord Bot</h1>
-<p>Effective Date: July 11, 2025</p>
+<p>Effective Date: July 12, 2025</p>
 
 <p>
     This Terms of Service (TOS) applies to the Discord bot instance known as ”Domain Dave” (hereinafter ”the Bot”).
@@ -16,7 +16,7 @@
 <h2>2. Description of Service</h2>
 <p>
     The Bot is a Discord application that uses Google's Gemini Artificial Intelligence models to generate responses and interact with users. It is typically invoked using aliases such as ”dave”, ”david”, ”domain”, and others. The Bot operates in specific Discord channels.
-    The Bot may observe a ”sleeping range”, during which its responsiveness might be altered.
+    The Bot may observe a ”sleeping range”, during which it will be unresponsive.
 </p>
 
 <h2>3. Data Collection and Usage</h2>
@@ -57,6 +57,9 @@
 <Card variant="filled">
     <h3>3.3. Data Management</h3>
     <ul>
+        <li>
+            Message history is automatically cleared at the start of the Bot's designated "sleeping range". However, it is periodically saved to disk to ensure persistence in case of unexpected shutdowns, such as a power outage.
+        </li>
         <li>
             Message history and associated data for a channel can be cleared by authorized Bot administrators using commands like <code>/reset</code> or through the WebUI.
         </li>
@@ -150,6 +153,12 @@
             The duration and specific triggers for mutes (beyond automated detections) are at the discretion of the Bot administrators or as defined in server-specific rules. Bot-initiated mutes via commands are handled by
             <a href="https://github.com/qwit-development/domain/blob/master/eventHandlers/botCommands.js">eventHandlers/botCommands.js</a> and may use specific emojis.
         </li>
+        <li>
+            If a user is muted by the Bot 50 times, they will be automatically banned from using the Bot.
+        </li>
+        <li>
+            Users are advised that automated mutes can be for extended durations. We encourage all users to interact with the Bot respectfully and adhere to standard conversational etiquette to avoid triggering the moderation system.
+        </li>
     </ul>
 </Card>
 <Card variant="filled">
@@ -192,7 +201,7 @@
         <a href="https://github.com/qwit-development/domain/blob/master/functions/usageRep.js">functions/usageRep.js</a>) where users are assigned a score. This score can influence the Bot's responsiveness and helpfulness, potentially tiered as implied in persona prompts. Reputation scores are associated with a user's Discord ID and stored by the Bot instance. Scores are generally not publicly visible to other users. Upvote/downvote emojis may be used in relation to this system.
     </p>
     <p>
-        Users of the "Domain Dave" instance may request the removal of their User ID and associated reputation score from the database by contacting <a href="mailto:contact@anchietae.cc">contact@anchietae.cc</a>. Providing your Discord User ID will expedite this process. Please note that such a request will not remove an active ban (see Section 6.2); attempts to circumvent a ban via data deletion requests are prohibited and will be disregarded.
+        Users of the "Domain Dave" instance may request the removal of their User ID and associated reputation score from the database by contacting <a href="mailto:contact@anchietae.cc">contact@anchietae.cc</a>. Providing your Discord User ID will expedite this process. Please note that it is not technically feasible to remove individual user messages from the Bot's conversational history. Furthermore, such a request will not remove an active ban (see Section 6.2); attempts to circumvent a ban via data deletion requests are prohibited and will be disregarded.
     </p>
 </Card>
 <Card variant="elevated">
