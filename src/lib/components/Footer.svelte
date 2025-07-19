@@ -1,12 +1,13 @@
 <script lang="ts">
-    import { Button, Icon, Snackbar } from "m3-svelte";
+    import FooterPopout from "./FooterPopout.svelte";
+    import { Button, Icon } from "m3-svelte";
     import mail from "@ktibow/iconset-material-symbols/mail-outline";
     import coffee from "@ktibow/iconset-material-symbols/coffee-outline";
     import graph_1 from "@ktibow/iconset-material-symbols/graph-1";
     import eyeglasses_2 from "@ktibow/iconset-material-symbols/eyeglasses-2";
-    let snackbar: ReturnType<typeof Snackbar>;
 
     let isIncognito = false;
+    let open = false;
 
     import { detectIncognito } from "detectincognitojs";
 
@@ -55,27 +56,38 @@
             ><Icon icon={coffee}></Icon></Button
         >
     </div>
-    {#if isIncognito}
-        <div class="git-hash">
-            <Button
-            variant="text"
-            iconType="full"
-            disabled={true}
-            square={true}
-            ><Icon icon={eyeglasses_2}></Icon></Button>
-        </div>
-    {:else}
-    <div class="git-hash">
-        <Button
-            variant="text"
-            square={true}
-            click={() =>
-                snackbar.show({ message: __GIT_HASH_LONG__, closable: true })}
-            ><span>{__GIT_HASH_SHORT__}</span></Button>
-        <Snackbar bind:this={snackbar} />
+    <div class="footer">
+        {#if isIncognito}
+            <Button variant="text" iconType="full" disabled={true} square={true}
+                ><Icon icon={eyeglasses_2}></Icon></Button
+            >
+        {:else}
+            <Button variant="text" square={true} click={() => (open = true)}
+                ><span>{__GIT_HASH_SHORT__}</span></Button
+            >
+        {/if}
+        <Button variant="text" disabled={true} square={true}>
+            <img src="/banner.gif" alt="" draggable="false" />
+        </Button>
     </div>
-    {/if}
+    <div class="footer">
+        <Button
+            variant="filled"
+            href="https://www.abuseipdb.com/user/223280"
+            square={true}
+            title="AbuseIPDB Contributor"
+        >
+            <img
+                src="https://www.abuseipdb.com/contributor/223280.svg"
+                alt="AbuseIPDB Contributor Badge"
+                style="width: 100px;"
+                crossorigin="anonymous"
+            />
+        </Button>
+    </div>
 </footer>
+
+<FooterPopout bind:open></FooterPopout>
 
 <style>
     footer {
@@ -87,17 +99,18 @@
 
     .footer {
         display: flex;
+        text-align: center;
+        margin-top: 8px;
+        padding: 4px 0;
         justify-content: space-evenly;
         align-items: center;
     }
 
-    .git-hash {
-        text-align: center;
-        margin-top: 8px;
-        padding: 4px 0;
+    .footer img {
+        image-rendering: pixelated;
     }
 
-    .git-hash span {
+    .footer span {
         color: rgb(var(--m3-scheme-on-surface-variant));
         opacity: 0.7;
     }

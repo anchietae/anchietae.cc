@@ -133,8 +133,8 @@
 }
 
 :root {
-  --m3-font: "Roboto Flex", sans-serif;
-  --header-font: "Roboto Serif", serif;
+  --m3-font: "Adwaita Sans", sans-serif;
+  --header-font: "Adwaita Sans", sans-serif;
 }
 
 body {
@@ -142,6 +142,8 @@ body {
   color: rgb(var(--m3-scheme-on-background));
   margin: 0;
   padding: 0;
+
+  font-feature-settings: "calt" 1, "dlig" 1, "tnum" 1, "case" 1, "ccmp" 1, "zero" 1, "ss02" 1, "ss03" 1, "cv10" 1, "cv06" 1, "cv01" 1, "cv03" 1;
 }
 
 * {
@@ -149,6 +151,13 @@ body {
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+}
+
+img {
+  -webkit-user-drag: none;
 }
 
 h1, h2, h3, h4, h5, h6, p, ul, ol {

@@ -1,13 +1,17 @@
+<svelte:head>
+    <title>Domain ToS</title>
+</svelte:head>
+
 <script lang="ts">
     import {Card} from "m3-svelte";
 </script>
 
-<h1>Terms of Service for "Domain Dave" Discord Bot</h1>
-<p>Effective Date: June 15, 2025</p>
+<h1>Terms of Service for ”Domain Dave” Discord Bot</h1>
+<p>Effective Date: July 12, 2025</p>
 
 <p>
-    This Terms of Service ("TOS") applies to the Discord bot instance known as "Domain Dave" (hereinafter "the Bot").
-    The underlying software, "Domain-Unchained," is an open-source project. For terms related to self-hosting, please see Section 8.
+    This Terms of Service (TOS) applies to the Discord bot instance known as ”Domain Dave” (hereinafter ”the Bot”).
+    The underlying software, ”Domain-Unchained”, is an open-source project. For terms related to self-hosting, please see Section 8.
 </p>
 
 <h2>1. Acceptance of Terms</h2>
@@ -50,7 +54,7 @@
             These images are subsequently converted to base64 format and sent to the AI model provider for processing (see <a href="https://github.com/qwit-development/domain/blob/master/eventHandlers/fileUploader.js">eventHandlers/fileUploader.js</a> which handles this).
         </li>
         <li>
-            After processing, the temporarily stored image data is typically removed (e.g., via unlinking).
+            After processing, the temporarily stored image data is typically removed (via unlinking).
         </li>
     </ul>
 </Card>
@@ -145,7 +149,13 @@
         </li>
         <li>
             The duration and specific triggers for mutes (beyond automated detections) are at the discretion of the Bot administrators or as defined in server-specific rules. Bot-initiated mutes via commands are handled by
-            <a href="https://github.com/qwit-development/domain/blob/master/eventHandlers/botCommands.js">eventHandlers/botCommands.js</a>) and may use specific emojis.
+            <a href="https://github.com/qwit-development/domain/blob/master/eventHandlers/botCommands.js">eventHandlers/botCommands.js</a> and may use specific emojis.
+        </li>
+        <li>
+            If a user is muted by the Bot 50 times, they will be automatically banned from using the Bot.
+        </li>
+        <li>
+            Users are advised that automated mutes can be for extended durations. We encourage all users to interact with the Bot respectfully and adhere to standard conversational etiquette to avoid triggering the moderation system.
         </li>
     </ul>
 </Card>
@@ -157,10 +167,10 @@
             <a href="https://github.com/qwit-development/domain/blob/master/commands/amIBanned.js">commands/amIBanned.js</a>).
         </li>
         <li>
-            For the "Domain Dave" instance, decisions regarding additions to the ban list are typically final and may not be subject to appeal.
+            For the ”Domain Dave” instance, decisions regarding additions to the ban list are typically final and may not be subject to appeal.
         </li>
         <li>
-            Attempting to bypass a ban by using alternate accounts ("alting") will result in those alternate accounts also being banned.
+            Attempting to bypass a ban by using alternate accounts (”alting”) will result in those alternate accounts also being banned.
         </li>
     </ul>
 </Card>
@@ -189,25 +199,31 @@
         <a href="https://github.com/qwit-development/domain/blob/master/functions/usageRep.js">functions/usageRep.js</a>) where users are assigned a score. This score can influence the Bot's responsiveness and helpfulness, potentially tiered as implied in persona prompts. Reputation scores are associated with a user's Discord ID and stored by the Bot instance. Users can view their position on the leaderboard at: <a href="https://dave.anchietae.cc/leaderboard">https://dave.anchietae.cc/leaderboard</a>. Upvote/downvote emojis may be used in relation to this system.
     </p>
     <p>
-        Users of the "Domain Dave" instance may request the removal of their User ID and associated reputation score from the database by contacting <a href="mailto:contact@anchietae.cc">contact@anchietae.cc</a>. Providing your Discord User ID will expedite this process.
+        Users of the "Domain Dave" instance may request the removal of their User ID and associated reputation score from the database by contacting <a href="mailto:contact@anchietae.cc">contact@anchietae.cc</a>. Providing your Discord User ID will expedite this process. Please note that it is not technically feasible to remove individual user messages from the Bot's conversational history. Furthermore, such a request will not remove an active ban (see Section 6.2); attempts to circumvent a ban via data deletion requests are prohibited and will be disregarded.
     </p>
 </Card>
 <Card variant="elevated">
     <h3>7.3. Other Indicators</h3>
     <p>The Bot may use specific emojis for feedback, such as indicating an upload is in progress or completed.</p>
 </Card>
+<Card variant="filled">
+    <h3>7.4. Memory Functionality</h3>
+    <p>
+        The Bot may create summaries or "memories" based on its daily conversations to maintain long-term context and improve user experience. You acknowledge that a data deletion request may not result in the removal of all mentions of your user from these generated memories.
+    </p>
+</Card>
 
 <h2>8. Self-Hosting and Open Source</h2>
-<Card variant="filled">
+<Card variant="elevated">
     <h3>8.1. Availability and License</h3>
     <p>
-        The underlying software for the Bot, "Domain-Unchained," is open-source and licensed under the GNU Affero General Public License v3.0 or later (AGPLv3+), as detailed in
+        The underlying software for the Bot, ”Domain-Unchained”, is open-source and licensed under the GNU Affero General Public License v3.0 or later (AGPLv3+), as detailed in
         <a href="https://github.com/qwit-development/domain/blob/master/LICENSE.md">LICENSE.md</a> and <a href="https://github.com/qwit-development/domain/blob/master/readme.md">readme.md</a>. Users have the right to download, modify, and run their own instances of the software.
     </p>
 </Card>
-<Card variant="elevated">
+<Card variant="filled">
     <h3>8.2. Self-Hoster Responsibilities</h3>
-    <p>If you choose to self-host an instance of "Domain-Unchained":</p>
+    <p>If you choose to self-host an instance of ”Domain-Unchained”:</p>
     <ul>
         <li>
             You are solely responsible for your instance's configuration (including settings for Discord tokens, AI API keys, active channels, prompt paths, WebUI ports, etc., as outlined in
@@ -224,15 +240,15 @@
         </li>
     </ul>
 </Card>
-<Card variant="filled">
+<Card variant="elevated">
     <h3>8.3. Applicability of These Terms</h3>
     <p>
-        This TOS specifically governs the "Domain Dave" instance. While it may serve as a template, self-hosters are responsible for establishing their own terms for their instances. The owners of "Domain Dave" are not responsible for any self-hosted instances.
+        This TOS specifically governs the ”Domain Dave” instance. While it may serve as a template, self-hosters are responsible for establishing their own terms for their instances. The owners of ”Domain Dave” are not responsible for any self-hosted instances.
     </p>
 </Card>
 
 <h2>9. Disclaimer of Warranties</h2>
-<p>THE BOT IS PROVIDED "AS IS" AND "AS AVAILABLE," WITHOUT ANY WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. THE BOT OWNERS DO NOT WARRANT THAT THE BOT WILL BE ERROR-FREE, UNINTERRUPTED, SECURE, OR THAT DEFECTS WILL BE CORRECTED.</p>
+<p>THE BOT IS PROVIDED "AS IS" AND ”AS AVAILABLE”, WITHOUT ANY WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. THE BOT OWNERS DO NOT WARRANT THAT THE BOT WILL BE ERROR-FREE, UNINTERRUPTED, SECURE, OR THAT DEFECTS WILL BE CORRECTED.</p>
 
 <h2>10. Limitation of Liability</h2>
 <p>TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL THE BOT OWNERS OR DEVELOPERS (INCLUDING THOSE MENTIONED IN
@@ -242,4 +258,4 @@
 <p>These terms may be modified at any time without prior notice. Changes will be effective immediately upon posting the revised TOS. Your continued use of the Bot after such changes constitutes your acceptance of the new terms. It is your responsibility to review this TOS periodically for updates.</p>
 
 <h2>12. Contact Information</h2>
-<p>For questions regarding this TOS for the "Domain Dave" instance, or for data removal requests as specified in Section 7.2, please contact: <a href="mailto:contact@anchietae.cc">contact@anchietae.cc</a>.</p>
+<p>For questions regarding this TOS for the ”Domain Dave” instance, or for data removal requests as specified in Section 7.2, please contact: <a href="mailto:contact@anchietae.cc">contact@anchietae.cc</a>.</p>
