@@ -15,8 +15,8 @@
 
 <h2>2. Description of Service</h2>
 <p>
-    The Bot is a Discord application that uses Google's Gemini Artificial Intelligence models to generate responses and interact with users. It is typically invoked using aliases such as "dave", "david", "domain", and others. The Bot operates in specific Discord channels.
-    The Bot may observe a "sleeping range", during which its responsiveness might be altered.
+    The Bot is a Discord application that uses various Artificial Intelligence models (via OpenAI-compatible completions API) to generate responses and interact with users based on context rather than specific invocation commands. The Bot operates in specific Discord channels.
+    The Bot may observe a "sleeping range", during which its responsiveness might be altered and message history is cleared.
 </p>
 
 <h2>3. Data Collection and Usage</h2>
@@ -25,7 +25,7 @@
     <p>To provide contextual responses, the Bot collects and processes data from interactions, including:</p>
     <ul>
         <li>
-            Message history from channels it operates in, up to a maximum of 200 messages.
+            Message history from channels it operates in, up to a maximum of 200 messages. This message history is temporarily stored for context but is deleted when the Bot enters its "sleeping" period. The message history may also be saved to disk solely for recovery purposes in case the host experiences technical issues. Separately, the Bot tracks and permanently stores a counter of the total number of messages sent by each user.
         </li>
         <li>
             Discord User information: Discord Username, User ID, and Display Name of users interacting in monitored channels.
@@ -47,7 +47,7 @@
             <a href="https://github.com/qwit-development/domain/blob/master/eventHandlers/botCommands.js">eventHandlers/botCommands.js</a>).
         </li>
         <li>
-            These images are subsequently uploaded to Google for processing by the Gemini model (see <a href="https://github.com/qwit-development/domain/blob/master/eventHandlers/fileUploader.js">eventHandlers/fileUploader.js</a> which uses this).
+            These images are subsequently converted to base64 format and sent to the AI model provider for processing (see <a href="https://github.com/qwit-development/domain/blob/master/eventHandlers/fileUploader.js">eventHandlers/fileUploader.js</a> which handles this).
         </li>
         <li>
             After processing, the temporarily stored image data is typically removed (e.g., via unlinking).
@@ -58,7 +58,7 @@
     <h3>3.3. Data Management</h3>
     <ul>
         <li>
-            Message history and associated data for a channel can be cleared by authorized Bot administrators using commands like <code>/reset</code> or through the WebUI.
+            Message history and associated data for a channel can be cleared by authorized Bot administrators using commands like <code>/reset</code>, through the WebUI, or automatically when the Bot enters its sleeping period.
         </li>
         <li>
             User-specific data like messages and images are not directly accessed by Bot owners/administrators for general review, except where necessary for debugging, moderation, or if explicit logging is enabled. This excludes aggregated or derived data like reputation scores.
@@ -73,11 +73,11 @@
     <p>Data is collected and processed solely for the purpose of enabling the Bot to understand context, generate relevant responses, perform requested actions, and for the third-party AI provider (Google) to operate and improve its services as per their terms.</p>
 </Card>
 
-<h2>4. AI Model and Third-Party Services (Google Gemini)</h2>
+<h2>4. AI Model and Third-Party Services</h2>
 <Card variant="filled">
     <h3>4.1. AI Processing</h3>
     <p>
-        Response generation and data interpretation are primarily performed by a Google Gemini model, specifically the Gemini 2.5 Flash Preview model (utilized by
+        Response generation and data interpretation are performed by various AI models through OpenAI-compatible completions API endpoints. The specific model used may vary and is configured by the Bot administrators (utilized by
         <a href="https://github.com/qwit-development/domain/blob/master/initializers/geminiClient.js">initializers/geminiClient.js</a>).
     </p>
 </Card>
@@ -88,12 +88,9 @@
     </p>
 </Card>
 <Card variant="filled">
-    <h3>4.3. Data Usage by Google</h3>
+    <h3>4.3. Data Usage by AI Providers</h3>
     <p>
-        You acknowledge that data processed by the Bot, including message content, is shared with Google to enable the Gemini API functionality. Google may use this data in accordance with its own terms and policies. Users should refer to the Google Gemini API Terms of Service for more information: <a
-            href="https://ai.google.dev/gemini-api/terms"
-    >https://ai.google.dev/gemini-api/terms</a
-    >.
+        You acknowledge that data processed by the Bot, including message content, is shared with the configured AI model provider to enable API functionality. The AI provider may use this data in accordance with their own terms and policies. Users should refer to the specific AI provider's terms of service for more information about data usage and privacy practices.
     </p>
 </Card>
 
@@ -189,7 +186,7 @@
     <h3>7.2. User Reputation System</h3>
     <p>
         The Bot features a reputation system (see <a href="https://github.com/qwit-development/domain/blob/master/commands/reputation.js">commands/reputation.js</a> and
-        <a href="https://github.com/qwit-development/domain/blob/master/functions/usageRep.js">functions/usageRep.js</a>) where users are assigned a score. This score can influence the Bot's responsiveness and helpfulness, potentially tiered as implied in persona prompts. Reputation scores are associated with a user's Discord ID and stored by the Bot instance. Scores are generally not publicly visible to other users. Upvote/downvote emojis may be used in relation to this system.
+        <a href="https://github.com/qwit-development/domain/blob/master/functions/usageRep.js">functions/usageRep.js</a>) where users are assigned a score. This score can influence the Bot's responsiveness and helpfulness, potentially tiered as implied in persona prompts. Reputation scores are associated with a user's Discord ID and stored by the Bot instance. Users can view their position on the leaderboard at: <a href="https://dave.anchietae.cc/leaderboard">https://dave.anchietae.cc/leaderboard</a>. Upvote/downvote emojis may be used in relation to this system.
     </p>
     <p>
         Users of the "Domain Dave" instance may request the removal of their User ID and associated reputation score from the database by contacting <a href="mailto:contact@anchietae.cc">contact@anchietae.cc</a>. Providing your Discord User ID will expedite this process.
@@ -213,11 +210,11 @@
     <p>If you choose to self-host an instance of "Domain-Unchained":</p>
     <ul>
         <li>
-            You are solely responsible for your instance's configuration (including settings for Discord tokens, Gemini API keys, active channels, prompt paths, WebUI ports, etc., as outlined in
+            You are solely responsible for your instance's configuration (including settings for Discord tokens, AI API keys, active channels, prompt paths, WebUI ports, etc., as outlined in
             <a href="https://github.com/qwit-development/domain/blob/master/readme.md">readme.md</a>), data management, security, and maintenance.
         </li>
         <li>
-            You are responsible for ensuring your use of third-party services (like Discord and Google Gemini) complies with their respective terms of service.
+            You are responsible for ensuring your use of third-party services (like Discord and your chosen AI provider) complies with their respective terms of service.
         </li>
         <li>
             You are responsible for any data collected by your instance and must comply with all applicable data privacy laws and regulations.
