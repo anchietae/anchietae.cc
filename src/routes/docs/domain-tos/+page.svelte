@@ -6,12 +6,12 @@
     import {Card} from "m3-svelte";
 </script>
 
-<h1>Terms of Service for ”Domain Dave” Discord Bot</h1>
+<h1>Terms of Service for "Domain Dave" Discord Bot</h1>
 <p>Effective Date: July 12, 2025</p>
 
 <p>
-    This Terms of Service (TOS) applies to the Discord bot instance known as ”Domain Dave” (hereinafter ”the Bot”).
-    The underlying software, ”Domain-Unchained”, is an open-source project. For terms related to self-hosting, please see Section 8.
+    This Terms of Service (TOS) applies to the Discord bot instance known as "Domain Dave" (hereinafter "the Bot").
+    The underlying software, "Domain-Unchained", is an open-source project. For terms related to self-hosting, please see Section 8.
 </p>
 
 <h2>1. Acceptance of Terms</h2>
@@ -167,10 +167,10 @@
             <a href="https://github.com/qwit-development/domain/blob/master/commands/amIBanned.js">commands/amIBanned.js</a>).
         </li>
         <li>
-            For the ”Domain Dave” instance, decisions regarding additions to the ban list are typically final and may not be subject to appeal.
+            For the "Domain Dave" instance, decisions regarding additions to the ban list are typically final and may not be subject to appeal.
         </li>
         <li>
-            Attempting to bypass a ban by using alternate accounts (”alting”) will result in those alternate accounts also being banned.
+            Attempting to bypass a ban by using alternate accounts ("alting") will result in those alternate accounts also being banned.
         </li>
     </ul>
 </Card>
@@ -217,13 +217,13 @@
 <Card variant="elevated">
     <h3>8.1. Availability and License</h3>
     <p>
-        The underlying software for the Bot, ”Domain-Unchained”, is open-source and licensed under the GNU Affero General Public License v3.0 or later (AGPLv3+), as detailed in
+        The underlying software for the Bot, "Domain-Unchained", is open-source and licensed under the GNU Affero General Public License v3.0 or later (AGPLv3+), as detailed in
         <a href="https://github.com/qwit-development/domain/blob/master/LICENSE.md">LICENSE.md</a> and <a href="https://github.com/qwit-development/domain/blob/master/readme.md">readme.md</a>. Users have the right to download, modify, and run their own instances of the software.
     </p>
 </Card>
 <Card variant="filled">
     <h3>8.2. Self-Hoster Responsibilities</h3>
-    <p>If you choose to self-host an instance of ”Domain-Unchained”:</p>
+    <p>If you choose to self-host an instance of "Domain-Unchained":</p>
     <ul>
         <li>
             You are solely responsible for your instance's configuration (including settings for Discord tokens, AI API keys, active channels, prompt paths, WebUI ports, etc., as outlined in
@@ -243,12 +243,12 @@
 <Card variant="elevated">
     <h3>8.3. Applicability of These Terms</h3>
     <p>
-        This TOS specifically governs the ”Domain Dave” instance. While it may serve as a template, self-hosters are responsible for establishing their own terms for their instances. The owners of ”Domain Dave” are not responsible for any self-hosted instances.
+        This TOS specifically governs the "Domain Dave" instance. While it may serve as a template, self-hosters are responsible for establishing their own terms for their instances. The owners of "Domain Dave" are not responsible for any self-hosted instances.
     </p>
 </Card>
 
 <h2>9. Disclaimer of Warranties</h2>
-<p>THE BOT IS PROVIDED "AS IS" AND ”AS AVAILABLE”, WITHOUT ANY WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. THE BOT OWNERS DO NOT WARRANT THAT THE BOT WILL BE ERROR-FREE, UNINTERRUPTED, SECURE, OR THAT DEFECTS WILL BE CORRECTED.</p>
+<p>THE BOT IS PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT ANY WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. THE BOT OWNERS DO NOT WARRANT THAT THE BOT WILL BE ERROR-FREE, UNINTERRUPTED, SECURE, OR THAT DEFECTS WILL BE CORRECTED.</p>
 
 <h2>10. Limitation of Liability</h2>
 <p>TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL THE BOT OWNERS OR DEVELOPERS (INCLUDING THOSE MENTIONED IN
@@ -258,4 +258,4 @@
 <p>These terms may be modified at any time without prior notice. Changes will be effective immediately upon posting the revised TOS. Your continued use of the Bot after such changes constitutes your acceptance of the new terms. It is your responsibility to review this TOS periodically for updates.</p>
 
 <h2>12. Contact Information</h2>
-<p>For questions regarding this TOS for the ”Domain Dave” instance, or for data removal requests as specified in Section 7.2, please contact: <a href="mailto:contact@anchietae.cc">contact@anchietae.cc</a>.</p>
+<p>For questions regarding this TOS for the "Domain Dave" instance, or for data removal requests as specified in Section 7.2, please contact: <a href="mailto:contact@anchietae.cc">contact@anchietae.cc</a>.</p>
