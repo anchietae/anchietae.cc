@@ -7,7 +7,7 @@
 </script>
 
 <h1>Terms of Service for "Domain Dave" Discord Bot</h1>
-<p>Effective Date: July 12, 2025</p>
+<p>Effective Date: July 19, 2025</p>
 
 <p>
     This Terms of Service (TOS) applies to the Discord bot instance known as "Domain Dave" (hereinafter "the Bot").
