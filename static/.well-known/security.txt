@@ -1,0 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Contact: mailto:contact@anchietae.cc
+Contact: https://matrix.to/#/@ancient:anchietae.cc
+Expires: 2059-12-31T23:00:00.000Z
+Encryption: https://keys.openpgp.org/vks/v1/by-fingerprint/FA0600F8657BF90FEB151EBC63E72B0AA2C58EB1
+Acknowledgments: https://anchietae.cc/stuff/thank_you
+Preferred-Languages: en, hu
+Canonical: https://anchietae.cc/.well-known/security.txt
+Policy: https://anchietae.cc/.well-known/security.policy.txt
+-----BEGIN PGP SIGNATURE-----
+
+iHUEARYKAB0WIQT6BgD4ZXv5D+sVHrxj5ysKosWOsQUCaINdnwAKCRBj5ysKosWO
+scBjAP41w8kPIV3Dji7bl90LSLRanbW9Nxt5qCbZ5LQdmQkZwQD/XdoQWpYaArXL
+M5si5rLINl5CAqo22M41Aokr970r+Qg=
+=nz9N
+-----END PGP SIGNATURE-----

@@ -1,0 +1,31 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Hello! If you've found a security vulnerability in one of my projects, I'd truly appreciate a responsible report.
+
+Scope
+
+This policy covers my public code repositories (e.g., on GitHub, Gitea) and live demos/deployed instances that I directly host and manage. Please do not test third-party services, perform DoS attacks, or engage in social engineering.
+
+Guidelines for Reporting
+
+- -	Don't Break Anything: Avoid damage, service interruption, or data modification.
+- -	Minimal Access: Only gather enough info to confirm the vulnerability.
+- -	No Public Disclosure (Yet): Please don't share details publicly until I've confirmed a fix.
+
+How to Report
+
+Please email a detailed report to: contact@anchietae.cc
+
+Include: Project Name, What You Found, How to Reproduce It, Potential Impact, and any Proof of Concept. Let me know if you'd like credit!
+
+My Commitment
+
+I'll acknowledge your report within 2-3 days, investigate it, fix valid issues, and update you when resolved.
+-----BEGIN PGP SIGNATURE-----
+
+iHUEARYKAB0WIQT6BgD4ZXv5D+sVHrxj5ysKosWOsQUCaINdZQAKCRBj5ysKosWO
+sY/bAQCh7qwnBusuDBmRZRjbC0Lz4SiV+fbGgeRFHfE6eBizpAD/Q194WeBnUt9w
+oibzes30OiXBfO/txT8PHCjKyXtn7wY=
+=XWOu
+-----END PGP SIGNATURE-----
