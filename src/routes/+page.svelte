@@ -7,16 +7,19 @@
 </script>
 
 <svelte:head>
-    <title>Anchietae</title>
+    <title>anchietae</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap"
+        rel="stylesheet"
+    />
 </svelte:head>
 
 <!-- svelte-ignore a11y_no_static_element_interactions -->
 <!-- svelte-ignore a11y_click_events_have_key_events -->
 <h2>
-    Hi, I'm <u on:click={() => (open = !open)} class="name">Anchietae</u>, a
+    Hi, I'm <u on:click={() => (open = !open)} class="name">anchietae</u>, a
     student and self-taught dev.
 </h2>
 <p>
